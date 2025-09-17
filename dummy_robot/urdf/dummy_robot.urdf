@@ -48,17 +48,17 @@
     name="left_shoulder">
     <inertial>
       <origin
-        xyz="8.0272E-05 0.013977 0.00061085"
+        xyz="8.02717027340027E-05 0.0139773890538527 0.000610849214569997"
         rpy="0 0 0" />
       <mass
-        value="0.0097066" />
+        value="0.00970656797987933" />
       <inertia
-        ixx="6.5247E-06"
-        ixy="-1.0536E-08"
-        ixz="-6.1639E-07"
-        iyy="5.4145E-06"
-        iyz="-8.0179E-08"
-        izz="1.9151E-06" />
+        ixx="6.52473606592953E-06"
+        ixy="-1.05363145903582E-08"
+        ixz="-6.16393664536726E-07"
+        iyy="5.41452809820977E-06"
+        iyz="-8.01789332000635E-08"
+        izz="1.915122200915E-06" />
     </inertial>
     <visual>
       <origin
@@ -106,17 +106,17 @@
     name="left_arm">
     <inertial>
       <origin
-        xyz="0.038372 -0.021616 -0.033864"
+        xyz="0.0340743092630275 -0.0192083892573476 -0.0331995010498217"
         rpy="0 0 0" />
       <mass
-        value="0.10037" />
+        value="0.0906636812084869" />
       <inertia
-        ixx="2.2136E-05"
-        ixy="5.445E-06"
-        ixz="2.5459E-06"
-        iyy="3.0723E-05"
-        iyz="-1.5888E-06"
-        izz="3.8251E-05" />
+        ixx="1.73146976715666E-05"
+        ixy="6.78812285071822E-06"
+        ixz="2.55514100387687E-06"
+        iyy="2.82733581135196E-05"
+        iyz="-1.84784026608633E-06"
+        izz="3.16681842088577E-05" />
     </inertial>
     <visual>
       <origin
@@ -129,7 +129,7 @@
       <material
         name="">
         <color
-          rgba="1 1 1 1" />
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -161,20 +161,78 @@
       velocity="0" />
   </joint>
   <link
+    name="left_hand">
+    <inertial>
+      <origin
+        xyz="0.0219004827438896 0.0172569414258059 4.8689996595408E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.00970656797987934" />
+      <inertia
+        ixx="4.82175837443691E-06"
+        ixy="-1.3431515329532E-06"
+        ixz="-9.25949257927465E-09"
+        iyy="2.44944725476104E-06"
+        iyz="2.59086970956647E-07"
+        izz="6.58318073585634E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot/meshes/left_hand.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot/meshes/left_hand.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_hand_joint"
+    type="revolute">
+    <origin
+      xyz="0.056618 -0.061357 -0.040119"
+      rpy="0 0 0" />
+    <parent
+      link="left_arm" />
+    <child
+      link="left_hand" />
+    <axis
+      xyz="0.38857 0.92 -0.051063" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
     name="right_shoulder">
     <inertial>
       <origin
-        xyz="-7.6527E-05 -0.013977 -0.00061133"
+        xyz="-7.65274493058632E-05 -0.0139773890538549 -0.000611329582723918"
         rpy="0 0 0" />
       <mass
-        value="0.0097066" />
+        value="0.00970656797987938" />
       <inertia
-        ixx="6.5321E-06"
-        ixy="-1.0045E-08"
-        ixz="-5.881E-07"
-        iyy="5.4145E-06"
-        iyz="-8.0242E-08"
-        izz="1.9077E-06" />
+        ixx="6.53211630820218E-06"
+        ixy="-1.00448508385269E-08"
+        ixz="-5.88104254871472E-07"
+        iyy="5.41452809820979E-06"
+        iyz="-8.02419854308107E-08"
+        izz="1.90774195864238E-06" />
     </inertial>
     <visual>
       <origin
@@ -204,7 +262,7 @@
     name="right_shoulder_joint"
     type="revolute">
     <origin
-      xyz="0.016 -0.0749 0.049968"
+      xyz="0.016 -0.0749 0.0499682605579134"
       rpy="0 0 0" />
     <parent
       link="base_link" />
@@ -222,17 +280,17 @@
     name="right_arm">
     <inertial>
       <origin
-        xyz="0.042038 -0.027393 0.0232"
+        xyz="0.0380365314008572 -0.024747415925155 0.0239377383403199"
         rpy="0 0 0" />
       <mass
-        value="0.10037" />
+        value="0.0906636814036702" />
       <inertia
-        ixx="2.4292E-05"
-        ixy="6.6818E-06"
-        ixz="1.004E-06"
-        iyy="2.8421E-05"
-        iyz="-1.0782E-06"
-        izz="3.8398E-05" />
+        ixx="1.99532631240314E-05"
+        ixy="8.5762998316497E-06"
+        ixz="3.93868893673201E-07"
+        iyy="2.5126812132576E-05"
+        iyz="-9.71619705193105E-07"
+        izz="3.21761648505198E-05" />
     </inertial>
     <visual>
       <origin
@@ -262,14 +320,72 @@
     name="right_arm_joint"
     type="revolute">
     <origin
-      xyz="-0.0031053 -0.0275 -0.024806"
+      xyz="-0.00310531319967072 -0.0274999999999878 -0.024806390909034"
       rpy="0 0 0" />
     <parent
       link="right_shoulder" />
     <child
       link="right_arm" />
     <axis
-      xyz="0.12421 0 0.99226" />
+      xyz="0.124212527985579 0 0.992255636361634" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_hand">
+    <inertial>
+      <origin
+        xyz="-0.00686285977349416 -0.0264507177404785 -0.00554041778663797"
+        rpy="0 0 0" />
+      <mass
+        value="0.00970656797987935" />
+      <inertia
+        ixx="4.33865404707442E-06"
+        ixy="-1.89452975250622E-06"
+        ixz="6.10117946446929E-07"
+        iyy="3.29400646261338E-06"
+        iyz="-1.06550532534926E-07"
+        izz="6.2217258553665E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot/meshes/right_hand.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot/meshes/right_hand.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_hand_joint"
+    type="revolute">
+    <origin
+      xyz="0.08628 -0.025652 0.021852"
+      rpy="0 0 0" />
+    <parent
+      link="right_arm" />
+    <child
+      link="right_hand" />
+    <axis
+      xyz="-0.62604 -0.77585 0.078368" />
     <limit
       lower="0"
       upper="0"
@@ -280,17 +396,17 @@
     name="left_leg">
     <inertial>
       <origin
-        xyz="-0.023192 0.012928 -0.02256"
+        xyz="-0.0231919495539664 0.0129280743272203 -0.0225601371730573"
         rpy="0 0 0" />
       <mass
-        value="0.019413" />
+        value="0.0194131359597587" />
       <inertia
-        ixx="8.4399E-06"
-        ixy="3.9374E-08"
-        ixz="-7.0636E-08"
-        iyy="8.9375E-06"
-        iyz="-9.7354E-07"
-        izz="1.0331E-05" />
+        ixx="8.43985826684452E-06"
+        ixy="3.93735192824584E-08"
+        ixz="-7.0635693764272E-08"
+        iyy="8.93745083192274E-06"
+        iyz="-9.73544267452637E-07"
+        izz="1.03314636313413E-05" />
     </inertial>
     <visual>
       <origin
@@ -344,9 +460,9 @@
         value="0.0832912988386294" />
       <inertia
         ixx="2.63852190204483E-05"
-        ixy="-8.72416475871172E-07"
+        ixy="-8.72416475871173E-07"
         ixz="1.5648438005591E-06"
-        iyy="2.0289141615691E-05"
+        iyy="2.02891416156911E-05"
         iyz="4.61301844352046E-06"
         izz="1.4587253143042E-05" />
     </inertial>
@@ -396,14 +512,14 @@
     name="right_leg">
     <inertial>
       <origin
-        xyz="-0.0231919495539714 -0.0202630719951359 -0.0162942569145464"
+        xyz="-0.0231919495539715 -0.0202630719951359 -0.0162942569145465"
         rpy="0 0 0" />
       <mass
         value="0.0194131359597587" />
       <inertia
         ixx="8.43985826684455E-06"
-        ixy="-6.2415363422282E-08"
-        ixz="-5.14198178051034E-08"
+        ixy="-6.24153634222821E-08"
+        ixz="-5.14198178051036E-08"
         iyy="9.78372772207625E-06"
         iyz="1.18799186975678E-06"
         izz="9.48518674118785E-06" />
@@ -460,8 +576,8 @@
         value="0.0832912986528662" />
       <inertia
         ixx="2.65142350343061E-05"
-        ixy="8.9313884411212E-07"
-        ixz="7.35903496121205E-07"
+        ixy="8.93138844112121E-07"
+        ixz="7.35903496121207E-07"
         iyy="1.63244370072913E-05"
         iyz="-5.38615761570608E-06"
         izz="1.84229416247173E-05" />

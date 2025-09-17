@@ -1,1 +1,1 @@
-controller_joint_names: ['', 'left_shoulder_joint', 'left_arm_joint', 'right_shoulder_joint', 'right_arm_joint', 'left_leg_joint', 'left_limb_joint', 'right_leg_joint', 'right_limb_point', 'head_joint', ]
+controller_joint_names: ['', 'left_shoulder_joint', 'left_arm_joint', 'left_hand_joint', 'right_shoulder_joint', 'right_arm_joint', 'right_hand_joint', 'left_leg_joint', 'left_limb_joint', 'right_leg_joint', 'right_limb_point', 'head_joint', ]
