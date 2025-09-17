@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.1-11-gaed57c3-dirty  Build Version: 1.6.9385.29558
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="full-body-leg">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0008446 -0.00032953 0.16685"
+        rpy="0 0 0" />
+      <mass
+        value="5.6356" />
+      <inertia
+        ixx="0.014874"
+        ixy="5.3738E-06"
+        ixz="-3.1342E-06"
+        iyy="0.0069204"
+        iyz="2.6353E-05"
+        izz="0.01097" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://full-body-leg/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://full-body-leg/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="l_leg">
+    <inertial>
+      <origin
+        xyz="-0.025744 5.0902E-05 -0.16255"
+        rpy="0 0 0" />
+      <mass
+        value="1.2043" />
+      <inertia
+        ixx="0.0014409"
+        ixy="-2.8915E-07"
+        ixz="2.4641E-05"
+        iyy="0.0016716"
+        iyz="-7.3306E-06"
+        izz="0.00090611" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://full-body-leg/meshes/l_leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://full-body-leg/meshes/l_leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_leg_joint"
+    type="revolute">
+    <origin
+      xyz="0.027167 0.095531 0"
+      rpy="0 0 -0.00069811" />
+    <parent
+      link="base_link" />
+    <child
+      link="l_leg" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="r_leg">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://full-body-leg/meshes/r_leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://full-body-leg/meshes/r_leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_leg_joint"
+    type="revolute">
+    <origin
+      xyz="0.027033 -0.095569 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r_leg" />
+    <axis
+      xyz="-1 0.00069809 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

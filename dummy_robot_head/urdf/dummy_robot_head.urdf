@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.1-11-gaed57c3-dirty  Build Version: 1.6.9385.29558
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="dummy_robot_head">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0053044 -5.785E-05 0.0039955"
+        rpy="0 0 0" />
+      <mass
+        value="0.2602" />
+      <inertia
+        ixx="0.00032601"
+        ixy="-3.848E-08"
+        ixz="-7.6929E-06"
+        iyy="0.00019551"
+        iyz="-1.6221E-07"
+        izz="0.00018087" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot_head/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot_head/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_shoulder">
+    <inertial>
+      <origin
+        xyz="-0.000494977669290797 0.0139773890538528 -0.000366847947007587"
+        rpy="0 0 0" />
+      <mass
+        value="0.00970656797987935" />
+      <inertia
+        ixx="3.52586283227132E-06"
+        ixy="6.49698493982785E-08"
+        ixz="-2.28261869689644E-06"
+        iyy="5.41452809820979E-06"
+        iyz="4.81517800648274E-08"
+        izz="4.91399543457323E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot_head/meshes/left_shoulder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot_head/meshes/left_shoulder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_joint"
+    type="revolute">
+    <origin
+      xyz="0.016 0.0749 0.049968"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_shoulder" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_arm">
+    <inertial>
+      <origin
+        xyz="0.0500663852648216 0.0176178868920581 -0.0173452759347469"
+        rpy="0 0 0" />
+      <mass
+        value="0.100370249044869" />
+      <inertia
+        ixx="3.08959227956825E-05"
+        ixy="-3.5142416816462E-06"
+        ixz="8.23976905097358E-06"
+        iyy="3.16911027704537E-05"
+        iyz="3.05241568817197E-06"
+        izz="2.85236007152231E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot_head/meshes/left_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot_head/meshes/left_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint"
+    type="revolute">
+    <origin
+      xyz="-0.020085 0.0275 -0.014886"
+      rpy="0 0 0" />
+    <parent
+      link="left_shoulder" />
+    <child
+      link="left_arm" />
+    <axis
+      xyz="0.8034 0 0.59543" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_shoulder">
+    <inertial>
+      <origin
+        xyz="-0.000471493609443097 -0.0139773890538527 -0.000396577969099032"
+        rpy="0 0 0" />
+      <mass
+        value="0.00970656797987935" />
+      <inertia
+        ixx="3.81117730484313E-06"
+        ixy="-6.18873753263401E-08"
+        ixz="-2.35053144808739E-06"
+        iyy="5.41452809820978E-06"
+        iyz="-5.20540875384895E-08"
+        izz="4.62868096200142E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot_head/meshes/right_shoulder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot_head/meshes/right_shoulder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_shoulder_joint"
+    type="revolute">
+    <origin
+      xyz="0.016 -0.0749 0.049968"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_shoulder" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_arm">
+    <inertial>
+      <origin
+        xyz="0.0386268802577314 -0.0394332744746437 -0.00211040751772204"
+        rpy="0 0 0" />
+      <mass
+        value="0.100370249186633" />
+      <inertia
+        ixx="3.3849855264985E-05"
+        ixy="4.14919667773168E-06"
+        ixz="4.60871378699521E-06"
+        iyy="2.34063413906099E-05"
+        iyz="-4.8880736896276E-06"
+        izz="3.38544297007948E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot_head/meshes/right_arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot_head/meshes/right_arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint"
+    type="revolute">
+    <origin
+      xyz="-0.019132 -0.0275 -0.016092"
+      rpy="0 0 0" />
+    <parent
+      link="right_shoulder" />
+    <child
+      link="right_arm" />
+    <axis
+      xyz="0.76529 0 0.64369" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_leg">
+    <inertial>
+      <origin
+        xyz="-0.0259520293623099 0.0336376733069287 -0.0409183648472683"
+        rpy="0 0 0" />
+      <mass
+        value="0.0648169255282869" />
+      <inertia
+        ixx="2.55499543442854E-05"
+        ixy="2.03959696844264E-06"
+        ixz="-2.46663118785908E-06"
+        iyy="2.21598883657296E-05"
+        iyz="3.42148461544684E-06"
+        izz="2.09882762545361E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot_head/meshes/left_leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot_head/meshes/left_leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_leg_joint"
+    type="revolute">
+    <origin
+      xyz="0.0149 0.0385 -0.060532"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_leg" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_leg">
+    <inertial>
+      <origin
+        xyz="-0.0199948274010881 -0.0302492500877792 -0.0431164682909048"
+        rpy="0 0 0" />
+      <mass
+        value="0.0648169253370654" />
+      <inertia
+        ixx="2.48238419776463E-05"
+        ixy="2.28356711503589E-06"
+        ixz="3.2382027706721E-06"
+        iyy="2.29170488597893E-05"
+        iyz="-2.94973352747799E-06"
+        izz="2.09572280192438E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot_head/meshes/right_leg.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot_head/meshes/right_leg.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_leg_joint"
+    type="revolute">
+    <origin
+      xyz="0.0149 -0.0385 -0.060532"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_leg" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="head">
+    <inertial>
+      <origin
+        xyz="0.010032466927476 -0.00133262295692921 0.0158925814081951"
+        rpy="0 0 0" />
+      <mass
+        value="0.020219295801448" />
+      <inertia
+        ixx="6.0871503288167E-06"
+        ixy="-1.09650603321806E-07"
+        ixz="-1.3204350966027E-06"
+        iyy="5.2762259871767E-06"
+        iyz="1.75394759392237E-07"
+        izz="4.72238329098024E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot_head/meshes/head.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dummy_robot_head/meshes/head.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_joint"
+    type="revolute">
+    <origin
+      xyz="0.01675 -0.0005 0.087118"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="head" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

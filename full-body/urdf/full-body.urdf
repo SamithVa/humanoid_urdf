@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.1-11-gaed57c3-dirty  Build Version: 1.6.9385.29558
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="full-body">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00053139 -0.0013244 0.20001"
+        rpy="0 0 0" />
+      <mass
+        value="3.6188" />
+      <inertia
+        ixx="0.0054322"
+        ixy="-1.0839E-05"
+        ixz="2.6346E-05"
+        iyy="0.012712"
+        iyz="1.3529E-05"
+        izz="0.0091923" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://full-body/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://full-body/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_calf">
+    <inertial>
+      <origin
+        xyz="0.0082538 0.15927 -0.12021"
+        rpy="0 0 0" />
+      <mass
+        value="0.1584" />
+      <inertia
+        ixx="6.6066E-05"
+        ixy="-1.1421E-09"
+        ixz="1.9766E-05"
+        iyy="0.00031468"
+        iyz="4.8485E-11"
+        izz="0.00031575" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://full-body/meshes/left_calf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://full-body/meshes/left_calf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_limb_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0625 0.2711 0"
+      rpy="1.5708 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_calf" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_calf">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://full-body/meshes/right_calf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://full-body/meshes/right_calf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_calf_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0625 0.2711 0"
+      rpy="1.5708 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_calf" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
